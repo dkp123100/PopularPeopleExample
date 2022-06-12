@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PeopleListCollectionViewCell" customModule="PopularPeopleExample" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="5zg-KW-XW1" customClass="PeopleListCollectionViewCell" customModule="PopularPeopleExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aok-Yt-Ylh">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="500"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRd-S3-9aw">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="430"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-wi-4nk">
+                        <rect key="frame" x="8" y="442" width="184" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Xpf-wi-4nk" secondAttribute="height" multiplier="184:21" id="ExQ-Zm-ZXh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relase Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-SW-Gsa">
+                        <rect key="frame" x="8" y="471" width="184" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nGO-SW-Gsa" secondAttribute="height" multiplier="184:21" id="wK0-xI-dSQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nGO-SW-Gsa" secondAttribute="bottom" constant="8" id="3f8-GV-eux"/>
+                    <constraint firstAttribute="trailing" secondItem="nGO-SW-Gsa" secondAttribute="trailing" constant="8" id="G0j-bl-tIl"/>
+                    <constraint firstItem="nGO-SW-Gsa" firstAttribute="top" secondItem="Xpf-wi-4nk" secondAttribute="bottom" constant="8" id="LuA-P8-T3k"/>
+                    <constraint firstAttribute="trailing" secondItem="qRd-S3-9aw" secondAttribute="trailing" id="P2a-mR-jEF"/>
+                    <constraint firstItem="Xpf-wi-4nk" firstAttribute="top" secondItem="qRd-S3-9aw" secondAttribute="bottom" priority="999" constant="12" id="XkA-xA-UAi"/>
+                    <constraint firstItem="qRd-S3-9aw" firstAttribute="leading" secondItem="aok-Yt-Ylh" secondAttribute="leading" id="Zxe-ld-cKO"/>
+                    <constraint firstItem="nGO-SW-Gsa" firstAttribute="leading" secondItem="aok-Yt-Ylh" secondAttribute="leading" constant="8" id="b4I-vJ-Dxr"/>
+                    <constraint firstItem="qRd-S3-9aw" firstAttribute="top" secondItem="aok-Yt-Ylh" secondAttribute="top" id="gjk-KL-b7W"/>
+                    <constraint firstAttribute="trailing" secondItem="Xpf-wi-4nk" secondAttribute="trailing" constant="8" id="lvm-oI-MJW"/>
+                    <constraint firstItem="Xpf-wi-4nk" firstAttribute="leading" secondItem="aok-Yt-Ylh" secondAttribute="leading" constant="8" id="pLu-Jz-k6f"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="imgVProfile" destination="qRd-S3-9aw" id="gj5-J5-Sj9"/>
+                <outlet property="lblGender" destination="nGO-SW-Gsa" id="lkh-XN-spU"/>
+                <outlet property="lblName" destination="Xpf-wi-4nk" id="D5O-OB-Rqu"/>
+            </connections>
+            <point key="canvasLocation" x="-463.768115942029" y="71.651785714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>
