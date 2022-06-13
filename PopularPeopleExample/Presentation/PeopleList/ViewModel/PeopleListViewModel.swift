@@ -32,7 +32,7 @@ class DefaultPeopleListViewModel: PeopleListViewModel {
         
         return Promise<[PeopleResults]> { results in
             
-            let todosPromise: Promise<PeopleResponseModel_Base> = peopleListUseCase.execute(paramters: nil)
+            let todosPromise: Promise<PeopleResponseModelBase> = peopleListUseCase.execute(paramters: nil)
             
             firstly {
                 todosPromise

@@ -19,7 +19,7 @@ class PeopleListRepositoryTest: XCTestCase {
         let expectation = expectation(description: "test_fetch_people_list_success_case")
         let mockCalledPostAPIResponse = PeopleListRepositoryTest.mockPeopleListResponse()
         let resource = DefaultPeopleListRepository(serviceManager: MockServiceManager(mockCalledPostAPIResponse: mockCalledPostAPIResponse, error: nil))
-        let todosPromise: Promise<PeopleResponseModel_Base> = resource.fetchPeopleList(paramters: nil)
+        let todosPromise: Promise<PeopleResponseModelBase> = resource.fetchPeopleList(paramters: nil)
         firstly {
             todosPromise
         }
@@ -38,7 +38,7 @@ class PeopleListRepositoryTest: XCTestCase {
         
         let resource = DefaultPeopleListRepository(serviceManager: MockServiceManager(mockCalledPostAPIResponse: nil, error: RuntimeError.init(MessageConstants.someThingWentWrong)))
         let expectation = expectation(description: "test_fetch_people_list_failure_case")
-        let todosPromise: Promise<PeopleResponseModel_Base> = resource.fetchPeopleList(paramters: nil)
+        let todosPromise: Promise<PeopleResponseModelBase> = resource.fetchPeopleList(paramters: nil)
         firstly {
             todosPromise
         }
@@ -53,11 +53,11 @@ class PeopleListRepositoryTest: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
-    static func mockPeopleListResponse() -> PeopleResponseModel_Base? {
+    static func mockPeopleListResponse() -> PeopleResponseModelBase? {
         let fileData = DataConverter().getData(name: "PeopleListResponse")
-        var resultPeopleListModel: PeopleResponseModel_Base?
+        var resultPeopleListModel: PeopleResponseModelBase?
         do {
-            resultPeopleListModel = try JSONDecoder().decode(PeopleResponseModel_Base.self, from: fileData)
+            resultPeopleListModel = try JSONDecoder().decode(PeopleResponseModelBase.self, from: fileData)
         } catch {
             resultPeopleListModel = nil
         }

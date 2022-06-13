@@ -19,9 +19,15 @@ extension ServiceManager  {
     func checkAndCancelForTheRequest(_ url: String) {}
 }
 
-struct DefaultServiceManager: ServiceManager {
+class test: DefaultServiceManager  {
+    override func checkAndCancelForTheRequest(_ url: String) {
+    }
+}
+
+class DefaultServiceManager: ServiceManager {
     
     static let shared = DefaultServiceManager()
+    private init() { }
     
     func checkAndCancelForTheRequest(_ url: String) {
         Alamofire.Session.default.session.getAllTasks { (tasks) in

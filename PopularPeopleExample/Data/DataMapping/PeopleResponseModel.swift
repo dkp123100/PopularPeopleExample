@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PeopleResponseModel_Base : Decodable {
+struct PeopleResponseModelBase : Decodable {
     let results : [PeopleResults]?
     let total_results : Int?
     

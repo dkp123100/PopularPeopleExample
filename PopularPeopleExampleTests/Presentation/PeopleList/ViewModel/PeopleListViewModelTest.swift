@@ -13,7 +13,7 @@ import PromiseKit
 
 class PeopleListViewModelTest: XCTestCase {
     
-    var mockCalledPostAPIResponse: PeopleResponseModel_Base!
+    var mockCalledPostAPIResponse: PeopleResponseModelBase!
     var mockPeopleListUseCase: PeopleListUseCase!
     var peopleListViewModel: PeopleListViewModel!
     

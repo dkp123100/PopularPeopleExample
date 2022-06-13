@@ -30,7 +30,8 @@
 		8C4AF66E285208890062A1A2 /* ApplicationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66B285208890062A1A2 /* ApplicationConstant.swift */; };
 		8C4AF66F285208890062A1A2 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66C285208890062A1A2 /* MessageConstants.swift */; };
 		8C4AF670285208890062A1A2 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66D285208890062A1A2 /* ErrorHandler.swift */; };
-		8C4AF67A285212090062A1A2 /* PeopleResponseModel_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF679285212090062A1A2 /* PeopleResponseModel_Base.swift */; };
+		8C4AF67A285212090062A1A2 /* PeopleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF679285212090062A1A2 /* PeopleResponseModel.swift */; };
+		8C668DC82857C703007DBD07 /* PeopleResponseModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C668DC72857C703007DBD07 /* PeopleResponseModelTest.swift */; };
 		8CBFA2E12854A52F00FF8F75 /* ExtensionUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBFA2E02854A52F00FF8F75 /* ExtensionUICollectionView.swift */; };
 		8CBFA2E52855290B00FF8F75 /* PeopleListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CBFA2E42855290B00FF8F75 /* PeopleListResponse.json */; };
 		8CBFA2E828552D6C00FF8F75 /* PopularPeopleDIContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBFA2E728552D6C00FF8F75 /* PopularPeopleDIContainerTest.swift */; };
@@ -90,7 +91,8 @@
 		8C4AF66B285208890062A1A2 /* ApplicationConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConstant.swift; sourceTree = "<group>"; };
 		8C4AF66C285208890062A1A2 /* MessageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 		8C4AF66D285208890062A1A2 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
-		8C4AF679285212090062A1A2 /* PeopleResponseModel_Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponseModel_Base.swift; sourceTree = "<group>"; };
+		8C4AF679285212090062A1A2 /* PeopleResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponseModel.swift; sourceTree = "<group>"; };
+		8C668DC72857C703007DBD07 /* PeopleResponseModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponseModelTest.swift; sourceTree = "<group>"; };
 		8CBFA2E02854A52F00FF8F75 /* ExtensionUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUICollectionView.swift; sourceTree = "<group>"; };
 		8CBFA2E42855290B00FF8F75 /* PeopleListResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PeopleListResponse.json; sourceTree = "<group>"; };
 		8CBFA2E728552D6C00FF8F75 /* PopularPeopleDIContainerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeopleDIContainerTest.swift; sourceTree = "<group>"; };
@@ -332,7 +334,7 @@
 		8C4AF671285211620062A1A2 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				8C4AF679285212090062A1A2 /* PeopleResponseModel_Base.swift */,
+				8C4AF679285212090062A1A2 /* PeopleResponseModel.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -343,6 +345,14 @@
 				8C04F22A2853041B007B1774 /* PeopleListRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8C668DC62857C6EC007DBD07 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				8C668DC72857C703007DBD07 /* PeopleResponseModelTest.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 		8CBFA2E22855272400FF8F75 /* Mocks */ = {
@@ -372,6 +382,7 @@
 		8CBFA2EB2856316300FF8F75 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8C668DC62857C6EC007DBD07 /* DataMapping */,
 				8CBFA2EC2856316C00FF8F75 /* Repositories */,
 			);
 			path = Data;
@@ -671,7 +682,7 @@
 				8C35996D2851CF09003F4772 /* PeopleListVC.swift in Sources */,
 				8CBFA2E12854A52F00FF8F75 /* ExtensionUICollectionView.swift in Sources */,
 				8C04F23128532053007B1774 /* PopularPeopleDIContainer.swift in Sources */,
-				8C4AF67A285212090062A1A2 /* PeopleResponseModel_Base.swift in Sources */,
+				8C4AF67A285212090062A1A2 /* PeopleResponseModel.swift in Sources */,
 				8C04F22E285307DB007B1774 /* PeopleListUseCase.swift in Sources */,
 				8C3599692851CF09003F4772 /* AppDelegate.swift in Sources */,
 				8C04F22B2853041B007B1774 /* PeopleListRepository.swift in Sources */,
@@ -693,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CBFA2F128566F2400FF8F75 /* DataConverter.swift in Sources */,
+				8C668DC82857C703007DBD07 /* PeopleResponseModelTest.swift in Sources */,
 				8CBFA2EE2856318700FF8F75 /* PeopleListRepositoryTest.swift in Sources */,
 				8CBFA2EA285603C200FF8F75 /* MockServiceManager.swift in Sources */,
 				8CBFA2E828552D6C00FF8F75 /* PopularPeopleDIContainerTest.swift in Sources */,
