@@ -13,13 +13,21 @@ import PromiseKit
 
 class PeopleListViewModelTest: XCTestCase {
     
+    var mockCalledPostAPIResponse: PeopleResponseModel_Base!
+    var mockPeopleListUseCase: PeopleListUseCase!
+    var peopleListViewModel: PeopleListViewModel!
+    
+    override func setUp() {
+        mockCalledPostAPIResponse = PeopleListRepositoryTest.mockPeopleListResponse()
+    }
+    
     func test_fetch_people_list_success_case() throws {
         
         let expectation = expectation(description: "test_fetch_people_list_success_case")
         
-        let mockCalledPostAPIResponse = PeopleListRepositoryTest.mockPeopleListResponse()
-        let resource = DefaultPeopleListRepository(serviceManager: MockServiceManager(mockCalledPostAPIResponse: mockCalledPostAPIResponse, error: nil))
-        let todosPromise: Promise<PeopleResponseModel_Base> = resource.fetchPeopleList(paramters: nil)
+        mockPeopleListUseCase = makeMockPeopleListUseCase(mockCalledPostAPIResponse: mockCalledPostAPIResponse, error: nil)
+        peopleListViewModel = DefaultPeopleListViewModel(peopleListUseCase: mockPeopleListUseCase)
+        let todosPromise: Promise<[PeopleResults]> = peopleListViewModel.fetchPeopleList()
         firstly {
             todosPromise
         }
@@ -36,9 +44,10 @@ class PeopleListViewModelTest: XCTestCase {
     
     func test_fetch_people_list_failure_case() throws {
         
-        let resource = DefaultPeopleListRepository(serviceManager: MockServiceManager(mockCalledPostAPIResponse: nil, error: RuntimeError.init(MessageConstants.someThingWentWrong)))
         let expectation = expectation(description: "test_fetch_people_list_failure_case")
-        let todosPromise: Promise<PeopleResponseModel_Base> = resource.fetchPeopleList(paramters: nil)
+        mockPeopleListUseCase = makeMockPeopleListUseCase(mockCalledPostAPIResponse: nil, error: RuntimeError.init(MessageConstants.someThingWentWrong))
+        peopleListViewModel = DefaultPeopleListViewModel(peopleListUseCase: mockPeopleListUseCase)
+        let todosPromise: Promise<[PeopleResults]> = peopleListViewModel.fetchPeopleList()
         firstly {
             todosPromise
         }
@@ -51,5 +60,18 @@ class PeopleListViewModelTest: XCTestCase {
             expectation.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func test_item_list_with_valid_index_and_count() {
+
+        mockPeopleListUseCase = makeMockPeopleListUseCase(mockCalledPostAPIResponse: mockCalledPostAPIResponse, error: nil)
+        let defaultPeopleListViewModel = DefaultPeopleListViewModel(peopleListUseCase: mockPeopleListUseCase)
+        defaultPeopleListViewModel.arrPeopleList = mockCalledPostAPIResponse.results!
+        
+        let listCount = defaultPeopleListViewModel.peopleCount
+        XCTAssertEqual(listCount, defaultPeopleListViewModel.arrPeopleList.count)
+        
+        let eachPeople = defaultPeopleListViewModel.peopleAt(index: listCount - 1)
+        XCTAssertNotNil(eachPeople)
     }
 }

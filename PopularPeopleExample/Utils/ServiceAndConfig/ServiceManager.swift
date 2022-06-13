@@ -16,9 +16,7 @@ protocol ServiceManager {
 }
 
 extension ServiceManager  {
-    func checkAndCancelForTheRequest(_ url: String) {
-        print("checkAndCancelForTheRequest Called")
-    }
+    func checkAndCancelForTheRequest(_ url: String) {}
 }
 
 struct DefaultServiceManager: ServiceManager {

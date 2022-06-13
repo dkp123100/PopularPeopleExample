@@ -52,7 +52,7 @@ class PeopleListRepositoryTest: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
-    
+
     static func mockPeopleListResponse() -> PeopleResponseModel_Base? {
         let fileData = DataConverter().getData(name: "PeopleListResponse")
         var resultPeopleListModel: PeopleResponseModel_Base?
