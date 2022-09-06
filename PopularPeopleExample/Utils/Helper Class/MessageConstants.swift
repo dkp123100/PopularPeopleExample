@@ -13,4 +13,3 @@ struct MessageConstants{
     static let ok = "Ok"
     static let someThingWentWrong = "Something went wrong, please try again."
 }
-

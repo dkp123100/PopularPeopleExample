@@ -26,7 +26,7 @@
 		8C35998A2851CF0B003F4772 /* PopularPeopleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3599892851CF0B003F4772 /* PopularPeopleExampleUITests.swift */; };
 		8C35998C2851CF0B003F4772 /* PopularPeopleExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35998B2851CF0B003F4772 /* PopularPeopleExampleUITestsLaunchTests.swift */; };
 		8C3599A02851F009003F4772 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35999F2851F009003F4772 /* ServiceManager.swift */; };
-		8C4AF669285203CE0062A1A2 /* API_Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF668285203CE0062A1A2 /* API_Constant.swift */; };
+		8C4AF669285203CE0062A1A2 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF668285203CE0062A1A2 /* APIConstant.swift */; };
 		8C4AF66E285208890062A1A2 /* ApplicationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66B285208890062A1A2 /* ApplicationConstant.swift */; };
 		8C4AF66F285208890062A1A2 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66C285208890062A1A2 /* MessageConstants.swift */; };
 		8C4AF670285208890062A1A2 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AF66D285208890062A1A2 /* ErrorHandler.swift */; };
@@ -87,7 +87,7 @@
 		8C3599892851CF0B003F4772 /* PopularPeopleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeopleExampleUITests.swift; sourceTree = "<group>"; };
 		8C35998B2851CF0B003F4772 /* PopularPeopleExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeopleExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C35999F2851F009003F4772 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		8C4AF668285203CE0062A1A2 /* API_Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Constant.swift; sourceTree = "<group>"; };
+		8C4AF668285203CE0062A1A2 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		8C4AF66B285208890062A1A2 /* ApplicationConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationConstant.swift; sourceTree = "<group>"; };
 		8C4AF66C285208890062A1A2 /* MessageConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 		8C4AF66D285208890062A1A2 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				8C35999F2851F009003F4772 /* ServiceManager.swift */,
-				8C4AF668285203CE0062A1A2 /* API_Constant.swift */,
+				8C4AF668285203CE0062A1A2 /* APIConstant.swift */,
 			);
 			path = ServiceAndConfig;
 			sourceTree = "<group>";
@@ -686,7 +686,7 @@
 				8C04F22E285307DB007B1774 /* PeopleListUseCase.swift in Sources */,
 				8C3599692851CF09003F4772 /* AppDelegate.swift in Sources */,
 				8C04F22B2853041B007B1774 /* PeopleListRepository.swift in Sources */,
-				8C4AF669285203CE0062A1A2 /* API_Constant.swift in Sources */,
+				8C4AF669285203CE0062A1A2 /* APIConstant.swift in Sources */,
 				8C35996B2851CF09003F4772 /* SceneDelegate.swift in Sources */,
 				8C4AF66E285208890062A1A2 /* ApplicationConstant.swift in Sources */,
 				8CBFA2F328568B1700FF8F75 /* ExtensionUIViewController.swift in Sources */,
